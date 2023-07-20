@@ -14,9 +14,9 @@
          <div class="favorite-product-image" style="background-image: url({{serverStaticPath + product.image}}) "></div>
          <div class="favorite-product-name">{{product.name}}а</div>
          <div class="favorite-product-price">{{product.price}} BYN</div>
-         <count-selector  (onCountChange)="updateCount(product, $event)"></count-selector>
+         <count-selector  *ngIf="product.countInCart" [count]="product.countInCart"  (onCountChange)="updateCount(product, $event)"></count-selector>
          <div class="favorite-product-action">
-           <button class="button" *ngIf="!product.countInCart" (click)="addToCart(product.id, 1)">В корзину</button>
+           <button class="button"  *ngIf="!product.countInCart" (click)="addToCart(product.id, 1)">В корзину</button>
            <button class="button button-transparent button-in-cart" *ngIf="product.countInCart">
              <span>В корзине</span>
            </button>
