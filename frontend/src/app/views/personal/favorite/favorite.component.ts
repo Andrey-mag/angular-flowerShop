@@ -95,6 +95,4 @@ export class FavoriteComponent implements OnInit {
         })
     }
   }
-
-  protected readonly count = count;
 }
