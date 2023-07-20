@@ -1,0 +1,164 @@
+<div class="detail" *ngIf="product">
+  <div class="container">
+
+    <div class="detail-title">
+      {{product.name}}
+    </div>
+
+    <div class="detail-product">
+      <div class="detail-image" style="background-image: url({{serverStaticPath + product.image}})"></div>
+      <div class="detail-info">
+
+        <div class="detail-info-items">
+          <div class="detail-info-item" *ngIf="product.lightning">
+            <div class="detail-info-item-icon">
+              <svg width="53" height="55" viewBox="0 0 53 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="eveno dd" clip-rule="evenodd"
+                      d="M37.4048 28.1161C37.0958 21.732 32.0783 16.7854 26.0972 16.7854C20.116 16.7854 15.0985 21.732 14.7896 28.1161H13C13.3116 20.8158 19.0562 14.9976 26.0972 14.9976C33.1381 14.9976 38.8828 20.8158 39.1943 28.1161H37.4048Z"
+                      fill="#519157"/>
+                <path d="M26.1104 10V15.3099" stroke="#519157" stroke-width="2.38372" stroke-linecap="round"/>
+                <path d="M26.1104 39.3608V44.3584" stroke="#519157" stroke-width="2.38372" stroke-linecap="round"/>
+                <path d="M32.0693 36.8618L35.4404 40.3956" stroke="#519157" stroke-width="2.38372"
+                      stroke-linecap="round"/>
+                <path d="M16.5752 40.3955L19.9463 36.8617" stroke="#519157" stroke-width="2.38372"
+                      stroke-linecap="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M19.6181 28.1162C19.5763 28.4223 19.5547 28.7351 19.5547 29.0533C19.5547 32.6758 22.3562 35.6125 25.812 35.6125C29.2678 35.6125 32.0692 32.6758 32.0692 29.0533C32.0692 28.7351 32.0476 28.4223 32.0059 28.1162H30.1965C30.2521 28.4177 30.2814 28.7308 30.2814 29.0533C30.2814 31.7688 28.2019 33.8248 25.812 33.8248C23.422 33.8248 21.3425 31.7688 21.3425 29.0533C21.3425 28.7308 21.3718 28.4177 21.4275 28.1162H19.6181Z"
+                      fill="#519157"/>
+                <path d="M13.8436 28.4287H38.3662" stroke="#519157" stroke-width="1.78779" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="detail-info-item-text">
+              <div class="detail-info-item-title">
+                Освещение
+              </div>
+              <div class="detail-info-item-description">
+                {{product.lightning}}
+              </div>
+            </div>
+          </div>
+          <div class="detail-info-item" *ngIf="product.humidity">
+            <div class="detail-info-item-icon">
+              <svg width="53" height="55" viewBox="0 0 53 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M37.4048 28.1161C37.0958 21.732 32.0783 16.7854 26.0972 16.7854C20.116 16.7854 15.0985 21.732 14.7896 28.1161H13C13.3116 20.8158 19.0562 14.9976 26.0972 14.9976C33.1381 14.9976 38.8828 20.8158 39.1943 28.1161H37.4048Z"
+                      fill="#519157"/>
+                <path d="M26.1104 10V15.3099" stroke="#519157" stroke-width="2.38372" stroke-linecap="round"/>
+                <path d="M26.1104 39.3608V44.3584" stroke="#519157" stroke-width="2.38372" stroke-linecap="round"/>
+                <path d="M32.0693 36.8618L35.4404 40.3956" stroke="#519157" stroke-width="2.38372"
+                      stroke-linecap="round"/>
+                <path d="M16.5752 40.3955L19.9463 36.8617" stroke="#519157" stroke-width="2.38372"
+                      stroke-linecap="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M19.6181 28.1162C19.5763 28.4223 19.5547 28.7351 19.5547 29.0533C19.5547 32.6758 22.3562 35.6125 25.812 35.6125C29.2678 35.6125 32.0692 32.6758 32.0692 29.0533C32.0692 28.7351 32.0476 28.4223 32.0059 28.1162H30.1965C30.2521 28.4177 30.2814 28.7308 30.2814 29.0533C30.2814 31.7688 28.2019 33.8248 25.812 33.8248C23.422 33.8248 21.3425 31.7688 21.3425 29.0533C21.3425 28.7308 21.3718 28.4177 21.4275 28.1162H19.6181Z"
+                      fill="#519157"/>
+                <path d="M13.8436 28.4287H38.3662" stroke="#519157" stroke-width="1.78779" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="detail-info-item-text">
+              <div class="detail-info-item-title">
+                Влажность
+              </div>
+              <div class="detail-info-item-description">
+              {{product.humidity}}
+              </div>
+            </div>
+          </div>
+          <div class="detail-info-item" *ngIf="product.temperature">
+            <div class="detail-info-item-icon">
+              <svg width="53" height="55" viewBox="0 0 53 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="26.2338" cy="27.5" rx="26.2338" ry="27.5" fill="white"/>
+                <path
+                  d="M29.9051 37.9016C29.9051 40.0783 28.2219 41.8428 26.1454 41.8428C24.069 41.8428 22.3857 40.0783 22.3857 37.9016C22.3857 35.725 24.069 33.9604 26.1454 33.9604C28.2219 33.9604 29.9051 35.725 29.9051 37.9016Z"
+                  fill="#519157"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M29.2788 31.3332V14.0129C29.2788 12.2826 27.8761 10.8798 26.1457 10.8798C24.4154 10.8798 23.0127 12.2826 23.0127 14.0129V31.3332H21.1328V14.0129C21.1328 11.2444 23.3772 9 26.1457 9C28.9143 9 31.1587 11.2444 31.1587 14.0129V31.3332H29.2788ZM31.1587 38.5586H21.1328V38.5587H23.0127H29.2788H31.1587V38.5586Z"
+                      fill="#519157"/>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M23.0128 29.3795C20.0691 30.7041 18 33.8389 18 37.4951C18 42.3493 21.6471 46.2843 26.146 46.2843C30.6449 46.2843 34.292 42.3493 34.292 37.4951C34.292 33.8388 32.2228 30.7039 29.2789 29.3794V31.5169C31.1202 32.6902 32.4121 34.8734 32.4121 37.4951C32.4121 41.4481 29.4747 44.4045 26.146 44.4045C22.8173 44.4045 19.8798 41.4481 19.8798 37.4951C19.8798 34.8736 21.1717 32.6904 23.0128 31.5171V29.3795Z"
+                      fill="#519157"/>
+              </svg>
+            </div>
+            <div class="detail-info-item-text">
+              <div class="detail-info-item-title">
+                Температура
+              </div>
+              <div class="detail-info-item-description">
+                {{product.temperature}}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detail-info-param" *ngIf="product.height">
+          <div class="detail-info-param-name">Высота:</div>
+          <div class="detail-info-param-data">{{product.height}} см</div>
+        </div>
+        <div class="detail-info-param" *ngIf="product.diameter">
+          <div class="detail-info-param-name">Диаметр (горшка):</div>
+          <div class="detail-info-param-data">{{product.diameter}} см</div>
+        </div>
+        <div class="detail-info-params">
+          <div class="detail-info-params-count">
+            <span>Количество: </span>
+            <count-selector [count]="count " (onCountChange)="updateCount($event)"></count-selector>
+          </div>
+          <div class="detail-info-params-price">
+            {{product.price }} BYN
+          </div>
+        </div>
+        <div class="detail-info-actions">
+          <button class="button button-transparent button-icon" (click)="updateFavorite()">
+            <svg *ngIf="product.isInFavorite" width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 14.3628C7.7693 14.3628 7.54605 14.333 7.36 14.266C4.51721 13.2912 0 9.8307 0 4.71814C0 2.11349 2.10605 0 4.69581 0C5.95349 0 7.1293 0.491163 8 1.3693C8.8707 0.491163 10.0465 0 11.3042 0C13.894 0 16 2.12093 16 4.71814C16 9.83814 11.4828 13.2912 8.64 14.266C8.45395 14.333 8.2307 14.3628 8 14.3628Z" fill="#6CAC72"/>
+            </svg>
+            <svg *ngIf="!product.isInFavorite" width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.5 14.6814C8.2693 14.6814 8.04605 14.6516 7.86 14.5846C5.01721 13.6098 0.5 10.1493 0.5 5.03674C0.5 2.43209 2.60605 0.318604 5.19581 0.318604C6.45349 0.318604 7.6293 0.809766 8.5 1.68791C9.3707 0.809766 10.5465 0.318604 11.8042 0.318604C14.394 0.318604 16.5 2.43953 16.5 5.03674C16.5 10.1567 11.9828 13.6098 9.14 14.5846C8.95395 14.6516 8.7307 14.6814 8.5 14.6814ZM5.19581 1.43488C3.22372 1.43488 1.61628 3.04977 1.61628 5.03674C1.61628 10.1195 6.50558 12.9474 8.22465 13.5353C8.3586 13.58 8.64884 13.58 8.78279 13.5353C10.4944 12.9474 15.3912 10.127 15.3912 5.03674C15.3912 3.04977 13.7837 1.43488 11.8116 1.43488C10.6805 1.43488 9.63116 1.96325 8.95395 2.8786C8.74558 3.16139 8.2693 3.16139 8.06093 2.8786C7.36884 1.95581 6.32698 1.43488 5.19581 1.43488Z"
+                fill="#6CAC72"/>
+            </svg>
+            <span *ngIf="!product.isInFavorite">В избранное</span>
+            <span *ngIf="product.isInFavorite">В избранном</span>
+          </button>
+
+          <button class="button" *ngIf="!product.countInCart" (click)="addToCart()">В корзину</button>
+          <button class="button button-transparent button-in-cart" *ngIf="product.countInCart " (click)="removeFromCart()">
+            <span>В корзине</span>
+            <span>Удалить</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="recommended-products">
+      <div class="carousel-header">
+        <div class="carousel-title">Рекомендуемые товары</div>
+        <div class="carousel-arrows">
+          <a class="move-backwards" (click)="owlCar.prev()">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10.5561 15C10.4013 15 10.2465 14.9435 10.1243 14.8224L4.8127 9.55746C3.94915 8.70151 3.94915 7.29647 4.8127 6.44052L10.1243 1.17563C10.3606 0.941456 10.7516 0.941456 10.9879 1.17563C11.2241 1.40981 11.2241 1.7974 10.9879 2.03158L5.67624 7.29647C5.2852 7.68407 5.2852 8.31392 5.67624 8.70151L10.9879 13.9664C11.2241 14.2006 11.2241 14.5882 10.9879 14.8224C10.8657 14.9354 10.7109 15 10.5561 15Z"
+                fill="#202B21"/>
+            </svg>
+          </a>
+          <a class="move-forward" (click)="owlCar.next()">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M5.44392 1C5.59871 1 5.75349 1.05652 5.87569 1.17765L11.1873 6.44254C12.0508 7.29849 12.0508 8.70353 11.1873 9.55948L5.87569 14.8244C5.63944 15.0585 5.2484 15.0585 5.01215 14.8244C4.7759 14.5902 4.7759 14.2026 5.01215 13.9684L10.3238 8.70353C10.7148 8.31593 10.7148 7.68608 10.3238 7.29849L5.01215 2.0336C4.7759 1.79942 4.7759 1.41182 5.01215 1.17765C5.13435 1.0646 5.28914 1 5.44392 1Z"
+                fill="#202B21"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div clas s="carousel-items">
+        <owl-carousel-o [options]="customOptions" #owlCar>
+          <ng-template carouselSlide *ngFor="let recommendProduct of recommendedProducts">
+            <product-card [product]="recommendProduct"></product-card>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+
+
+  </div>
+</div>
