@@ -75,6 +75,10 @@
 
         .favorite-product-action button {
           width: 160px;
+
+          &.button-in-cart span {
+            display: block;
+          }
         }
 
         .favorite-product-remove {
